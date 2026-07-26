@@ -131,6 +131,8 @@
     "product_information": "Informations sur le produit",
     "quantity": "Quantité",
     "product_total": "Nombre total de produits",
+    "free_shipping_bar_remaining": "Plus que {{ amount }} avant la livraison gratuite",
+    "free_shipping_bar_achieved": "Livraison gratuite débloquée !",
     "cart_estimated_total": "Total estimé",
     "seller_note": "Instructions spéciales",
     "cart_subtotal": "Sous-total",
