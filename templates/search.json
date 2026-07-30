@@ -17,7 +17,7 @@
           "static": true,
           "settings": {
             "type_preset": "h2",
-            "font": "var(--font-body--family)",
+            "font": "var(--font-primary--family)",
             "font_size": "",
             "line_height": "normal",
             "letter_spacing": "normal",

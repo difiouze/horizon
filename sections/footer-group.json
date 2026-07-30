@@ -11,10 +11,134 @@
   "type": "footer",
   "name": "t:names.footer",
   "sections": {
-    "section_46jfCB": {
+    "section_tXBerA": {
       "type": "section",
       "blocks": {
-        "group_GXpwNU": {
+        "text_GRpp7R": {
+          "type": "text",
+          "name": "t:names.heading",
+          "settings": {
+            "text": "<h2>Recevez nos récits de voyage et nouveautés</h2>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "custom",
+            "font": "var(--font-heading--family)",
+            "font_size": "2rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "text_color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "text_4hNWMy": {
+          "type": "text",
+          "name": "t:names.text",
+          "settings": {
+            "text": "<p>Une lettre par mois, sans spam — promis.<br/></p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "text_color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "email_signup_H8hcx4": {
+          "type": "email-signup",
+          "name": "t:names.email_signup",
+          "settings": {
+            "width": "custom",
+            "custom_width": 54,
+            "heading": "",
+            "heading_text_color": "",
+            "heading_preset": "h3",
+            "border_style": "all",
+            "input_style": "custom",
+            "border_width": 0,
+            "border_radius": 5,
+            "input_background_color": "",
+            "input_text_color": "",
+            "input_border_color": "",
+            "input_type_preset": "paragraph",
+            "style_class": "button-custom",
+            "custom_button_background": "{{ settings.color_palette.color4 }}",
+            "custom_button_text": "{{ settings.color_palette.background }}",
+            "custom_button_border": "{{ settings.color_palette.color4 }}",
+            "link_text_color": "",
+            "display_type": "text",
+            "label": "Sign up",
+            "integrated_button": false,
+            "button_type_preset": "paragraph",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "text_GRpp7R",
+        "text_4hNWMy",
+        "email_signup_H8hcx4"
+      ],
+      "name": "t:names.rich_text_section",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 25,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "background_media": "none",
+        "background_color": "",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_color": "",
+        "border_radius": 0,
+        "padding-block-start": 10,
+        "padding-block-end": 10
+      }
+    },
+    "section_Jcbx6J": {
+      "type": "section",
+      "blocks": {
+        "group_EEaNXd": {
           "type": "group",
           "settings": {
             "content_direction": "column",
@@ -53,7 +177,7 @@
             "padding-inline-end": 0
           },
           "blocks": {
-            "icon_kQ8DbG": {
+            "icon_JGWRrW": {
               "type": "icon",
               "settings": {
                 "icon": "eye",
@@ -64,7 +188,7 @@
               },
               "blocks": {}
             },
-            "group_VtEcbt": {
+            "group_x6YbDe": {
               "type": "group",
               "settings": {
                 "content_direction": "column",
@@ -103,10 +227,10 @@
                 "padding-inline-end": 0
               },
               "blocks": {
-                "text_rEkzUw": {
+                "text_9DeJrG": {
                   "type": "text",
                   "settings": {
-                    "text": "<h2>Conception intentionnelle</h2>",
+                    "text": "<h2>Intentional design</h2>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -128,10 +252,10 @@
                   },
                   "blocks": {}
                 },
-                "text_ntNyrp": {
+                "text_Yd4hRQ": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Tout ce que nous faisons commence par un « pourquoi »</p>",
+                    "text": "<p>Everything we do starts with why</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -155,17 +279,17 @@
                 }
               },
               "block_order": [
-                "text_rEkzUw",
-                "text_ntNyrp"
+                "text_9DeJrG",
+                "text_Yd4hRQ"
               ]
             }
           },
           "block_order": [
-            "icon_kQ8DbG",
-            "group_VtEcbt"
+            "icon_JGWRrW",
+            "group_x6YbDe"
           ]
         },
-        "group_3zfMbC": {
+        "group_E8N4ci": {
           "type": "group",
           "settings": {
             "content_direction": "column",
@@ -204,7 +328,7 @@
             "padding-inline-end": 0
           },
           "blocks": {
-            "icon_GWFK7K": {
+            "icon_6EGWWA": {
               "type": "icon",
               "settings": {
                 "icon": "heart",
@@ -215,7 +339,7 @@
               },
               "blocks": {}
             },
-            "group_qxKcFW": {
+            "group_gkKRMi": {
               "type": "group",
               "settings": {
                 "content_direction": "column",
@@ -254,10 +378,10 @@
                 "padding-inline-end": 0
               },
               "blocks": {
-                "text_fHMb7n": {
+                "text_ybWEFy": {
                   "type": "text",
                   "settings": {
-                    "text": "<h2>Fabriqué avec soin</h2>",
+                    "text": "<h2>Made with care</h2>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -279,10 +403,10 @@
                   },
                   "blocks": {}
                 },
-                "text_PzJFKd": {
+                "text_9rPFam": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Nous croyons en l’amélioration continue</p>",
+                    "text": "<p>We believe in building better</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -306,17 +430,17 @@
                 }
               },
               "block_order": [
-                "text_fHMb7n",
-                "text_PzJFKd"
+                "text_ybWEFy",
+                "text_9rPFam"
               ]
             }
           },
           "block_order": [
-            "icon_GWFK7K",
-            "group_qxKcFW"
+            "icon_6EGWWA",
+            "group_gkKRMi"
           ]
         },
-        "group_Cw9krG": {
+        "group_YQhwyA": {
           "type": "group",
           "settings": {
             "content_direction": "column",
@@ -355,7 +479,7 @@
             "padding-inline-end": 0
           },
           "blocks": {
-            "icon_gGGtre": {
+            "icon_UGwU37": {
               "type": "icon",
               "settings": {
                 "icon": "silhouette",
@@ -366,7 +490,7 @@
               },
               "blocks": {}
             },
-            "group_qnaTnU": {
+            "group_wXWMnC": {
               "type": "group",
               "settings": {
                 "content_direction": "column",
@@ -405,10 +529,10 @@
                 "padding-inline-end": 0
               },
               "blocks": {
-                "text_H8DtEA": {
+                "text_jkY3qQ": {
                   "type": "text",
                   "settings": {
-                    "text": "<h2>Une équipe avec un objectif</h2>",
+                    "text": "<h2>A team with a goal</h2>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -430,10 +554,10 @@
                   },
                   "blocks": {}
                 },
-                "text_cntmYN": {
+                "text_CQMirr": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>De vraies personnes qui fabriquent d’excellents produits</p>",
+                    "text": "<p>Real people making great products</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -457,21 +581,21 @@
                 }
               },
               "block_order": [
-                "text_H8DtEA",
-                "text_cntmYN"
+                "text_jkY3qQ",
+                "text_CQMirr"
               ]
             }
           },
           "block_order": [
-            "icon_gGGtre",
-            "group_qnaTnU"
+            "icon_UGwU37",
+            "group_wXWMnC"
           ]
         }
       },
       "block_order": [
-        "group_GXpwNU",
-        "group_3zfMbC",
-        "group_Cw9krG"
+        "group_EEaNXd",
+        "group_E8N4ci",
+        "group_YQhwyA"
       ],
       "name": "t:names.icons_with_text",
       "settings": {
@@ -503,29 +627,116 @@
         "padding-block-end": 48
       }
     },
+    "divider_w4rtBN": {
+      "type": "divider",
+      "name": "t:names.divider_section",
+      "settings": {
+        "background_color": "",
+        "divider_color": "",
+        "section_width": "full-width",
+        "thickness": 1,
+        "corner_radius": "square",
+        "width_percent": 100,
+        "alignment_horizontal": "center",
+        "padding-block-start": 16,
+        "padding-block-end": 16
+      }
+    },
     "footer": {
       "type": "footer",
       "blocks": {
-        "logo_NfdBiY": {
-          "type": "logo",
-          "name": "t:names.logo",
+        "group_qbnW4V": {
+          "type": "group",
+          "name": "t:names.group",
           "settings": {
-            "inverse": false,
-            "font": "heading",
-            "text_color": "{{ settings.color_palette.background }}",
-            "unit": "pixel",
-            "percent_width": 100,
-            "pixel_height": 16,
-            "custom_mobile_size": false,
-            "unit_mobile": "percent",
-            "percent_width_mobile": 100,
-            "pixel_height_mobile": 120,
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "background_media": "none",
+            "background_color": "",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 0,
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
             "padding-inline-end": 0
           },
-          "blocks": {}
+          "blocks": {
+            "logo_qLdBMR": {
+              "type": "logo",
+              "name": "t:names.logo",
+              "settings": {
+                "inverse": false,
+                "font": "heading",
+                "text_color": "",
+                "unit": "pixel",
+                "percent_width": 100,
+                "pixel_height": 16,
+                "custom_mobile_size": false,
+                "unit_mobile": "percent",
+                "percent_width_mobile": 100,
+                "pixel_height_mobile": 120,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_wRpX6i": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "<p>Maison de thé du monde, sélectionnée et infusée avec soin depuis 2014.</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "text_color": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "logo_qLdBMR",
+            "text_wRpX6i"
+          ]
         },
         "menu_main": {
           "type": "menu",
@@ -547,7 +758,7 @@
           },
           "blocks": {}
         },
-        "menu_XiQ9G8": {
+        "menu_MQfbCE": {
           "type": "menu",
           "settings": {
             "menu": "main-menu",
@@ -589,9 +800,9 @@
         }
       },
       "block_order": [
-        "logo_NfdBiY",
+        "group_qbnW4V",
         "menu_main",
-        "menu_XiQ9G8",
+        "menu_MQfbCE",
         "menu_footer"
       ],
       "name": "t:names.footer",
@@ -663,7 +874,9 @@
     }
   },
   "order": [
-    "section_46jfCB",
+    "section_tXBerA",
+    "section_Jcbx6J",
+    "divider_w4rtBN",
     "footer",
     "utilities"
   ]

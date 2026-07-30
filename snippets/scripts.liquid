@@ -25,7 +25,6 @@
       "@theme/money-formatting": "{{ 'money-formatting.js' | asset_url }}",
       "@theme/utilities": "{{ 'utilities.js' | asset_url }}",
       "@theme/variant-picker": "{{ 'variant-picker.js' | asset_url }}",
-      "@theme/variant-resolution": "{{ 'variant-resolution.js' | asset_url }}",
       "@theme/media-gallery": "{{ 'media-gallery.js' | asset_url }}",
       "@theme/quick-add": "{{ 'quick-add.js' | asset_url }}",
       "@theme/paginated-list-aspect-ratio": "{{ 'paginated-list-aspect-ratio.js' | asset_url }}",
@@ -281,6 +280,15 @@
 <script
   src="{{ 'auto-close-details.js' | asset_url }}"
   defer="defer"
+></script>
+
+
+{% comment %} CUSTOM SCRIPTS {% endcomment %}
+
+<script
+  src="{{ 'web-component-test.js' | asset_url }}"
+  type="module"
+  fetchpriority="low"
 ></script>
 
 <script>

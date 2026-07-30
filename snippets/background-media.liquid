@@ -133,4 +133,10 @@
   </div>
 {% endif %}
 
-{% render 'video-background-styles' %}
+{% stylesheet %}
+  @media (prefers-reduced-motion: reduce) {
+    video-background-component video {
+      display: none;
+    }
+  }
+{% endstylesheet %}
