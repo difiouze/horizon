@@ -54,6 +54,7 @@
     "carousel_pagination": "Carousel pagination",
     "cart_bubble": "Cart bubble",
     "cart_features": "Cart features",
+    "free_shipping_bar": "Free shipping bar",
     "cart_summary_mobile_colors": "On mobile, summary colors inherit from the cart section.",
     "colors": "Colors",
     "page_text_color_contrast_info": "Sections with a custom background color will use this text color only when there is sufficient color contrast.",
@@ -125,6 +126,7 @@
     "resource_reference_collection_title": "Displays title from parent collection",
     "resource_reference_product": "Auto connects to parent product",
     "resource_reference_product_card": "Displays product from parent section",
+    "resource_reference_product_intensity": "Displays intensity from a parent product metafield",
     "resource_reference_product_inventory": "Displays inventory from parent product",
     "resource_reference_product_media": "Displays media from parent product",
     "resource_reference_product_price": "Displays price from parent product",
@@ -229,6 +231,7 @@
     "carousel_hover_behavior_not_supported": "\"Carousel\" hover is not supported when \"Carousel\" type is selected at the section level",
     "carousel_layout_on_mobile": "Carousel is always used on mobile",
     "checkout_buttons": "Allows buyers to check out faster and can improve conversion. [Learn more](https://help.shopify.com/manual/online-store/dynamic-checkout)",
+    "free_shipping_bar_threshold": "Entered in your store's currency, for example 100 for $100.00",
     "custom_heading": "Custom heading",
     "custom_liquid": "Add app snippets or other code to create advanced customizations. [Learn more](https://shopify.dev/docs/api/liquid)",
     "edit_button_style_in_theme_settings": "Edit primary and secondary button styles in [theme settings](/editor?context=theme&category=buttons)",
@@ -379,6 +382,7 @@
     "product_recommendations": "Recommended products",
     "product_sku": "SKU",
     "product_review_stars": "Review stars",
+    "product_intensity": "Tea intensity",
     "product_variant_picker": "Variant picker",
     "products_carousel": "Featured collection: Carousel",
     "products_editorial": "Featured collection: Editorial",
@@ -842,6 +846,8 @@
     "drawer_borders": "Drawer border",
     "drop_shadow": "Drop shadow",
     "empty_cart_button_link": "Empty cart button link",
+    "show_free_shipping_bar": "Show free shipping progress bar",
+    "free_shipping_bar_threshold": "Amount for free shipping",
     // Collection setting for products shown before search input
     "empty_state_collection": "Empty state collection",
     "empty_state_collection_info": "Shown before a search is entered",
@@ -1037,6 +1043,12 @@
       "description_preset": "Description",
       "input_preset": "Input",
       "checkbox_preset": "Checkbox label"
+    },
+    "product_intensity": {
+      "metafield": "Metafield",
+      "metafield_info": "Namespace and key of the metafield, e.g. custom.intensity. The value must be a number from 1 to 5.",
+      "label": "Label",
+      "default_label": "Intensity:"
     },
     // Checkbox setting to enable quick add to cart from product cards
     "quick_add": "Quick add",

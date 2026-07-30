@@ -1,0 +1,68 @@
+{% doc %}
+  Renders a progress bar showing how much more the customer needs to spend
+  to reach the free shipping threshold set in theme settings.
+
+  @example
+  {% render 'cart-free-shipping-bar' %}
+{% enddoc %}
+
+{%- if settings.show_free_shipping_bar and settings.free_shipping_bar_threshold > 0 -%}
+  {%- liquid
+    assign threshold_cents = settings.free_shipping_bar_threshold | times: 100
+    assign remaining_cents = threshold_cents | minus: cart.total_price | at_least: 0
+    assign remaining_amount = remaining_cents | money
+    assign progress = cart.total_price | times: 100 | divided_by: threshold_cents | at_most: 100
+  -%}
+
+  <div
+    class="cart-free-shipping-bar{% if remaining_cents == 0 %} cart-free-shipping-bar--achieved{% endif %}"
+    role="status"
+  >
+    <p class="cart-free-shipping-bar__message cart-primary-typography">
+      {%- if remaining_cents > 0 -%}
+        {{ 'content.free_shipping_bar_remaining' | t: amount: remaining_amount }}
+      {%- else -%}
+        {{ 'content.free_shipping_bar_achieved' | t }}
+      {%- endif -%}
+    </p>
+    <div
+      class="cart-free-shipping-bar__track"
+      style="--cart-free-shipping-bar-progress: {{ progress }}%;"
+    >
+      <div class="cart-free-shipping-bar__fill"></div>
+    </div>
+  </div>
+{%- endif -%}
+
+{% stylesheet %}
+  .cart-free-shipping-bar {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-2xs);
+    width: 100%;
+  }
+
+  .cart-free-shipping-bar__message {
+    font-size: var(--font-size--sm);
+  }
+
+  .cart-free-shipping-bar--achieved .cart-free-shipping-bar__message {
+    font-weight: var(--font-weight-bold);
+  }
+
+  .cart-free-shipping-bar__track {
+    width: 100%;
+    height: var(--gap-2xs);
+    border-radius: var(--style-border-radius-pills);
+    background-color: rgb(var(--color-foreground-rgb) / var(--opacity-10-25));
+    overflow: hidden;
+  }
+
+  .cart-free-shipping-bar__fill {
+    width: var(--cart-free-shipping-bar-progress);
+    height: 100%;
+    border-radius: var(--style-border-radius-pills);
+    background-color: var(--color-foreground);
+    transition: width var(--animation-speed) ease;
+  }
+{% endstylesheet %}
