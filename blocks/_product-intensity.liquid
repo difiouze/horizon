@@ -1,0 +1,194 @@
+{% liquid
+  assign block_settings = block.settings
+  assign product = closest.product
+  assign metafield_reference = block_settings.metafield | default: 'custom.intensity'
+  assign metafield_namespace = metafield_reference | split: '.' | first
+  assign metafield_key = metafield_reference | split: '.' | last
+  assign intensity = product.metafields[metafield_namespace][metafield_key].value
+
+  if request.visual_preview_mode and product == blank
+    assign product = collections.all.products.first
+    assign intensity = product.metafields[metafield_namespace][metafield_key].value | default: 3
+  endif
+
+  if intensity != blank
+    assign intensity = intensity | times: 1 | at_least: 0 | at_most: 5
+  endif
+-%}
+
+{% if block_settings.icon_color != blank %}
+  {% style %}
+    .intensity-wrapper-{{ block.id }} {
+      --intensity-fill-color: {{ block_settings.icon_color }};
+      --intensity-fill-color-rgb: {{ block_settings.icon_color.rgb }};
+    }
+  {% endstyle %}
+{% endif %}
+
+{%- if intensity != blank -%}
+  <div
+    class="intensity-wrapper intensity-wrapper-{{ block.id }} spacing-style"
+    style="--intensity-icon-size: {{ block_settings.icon_size }}px; {% render 'spacing-style', settings: block_settings %}"
+    {{ block.shopify_attributes }}
+  >
+    <svg
+      class="visually-hidden"
+      style="width: 0; height: 0;"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 20 20"
+      role="presentation"
+    >
+      <defs>
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" id="intensity-leaf">
+          {%- render 'icon', icon: 'leaf' -%}
+        </symbol>
+      </defs>
+    </svg>
+
+    {%- if block_settings.label != blank -%}
+      <span class="intensity-label">{{ block_settings.label }}</span>
+    {%- endif -%}
+
+    <div
+      class="intensity"
+      aria-label="{{ 'accessibility.product_intensity' | t: value: intensity }}"
+    >
+      {%- for i in (1..5) -%}
+        <svg
+          class="intensity-icon{% if i <= intensity %} intensity-icon--filled{% endif %}"
+          viewBox="0 0 20 20"
+          role="presentation"
+        >
+          <use xlink:href="#intensity-leaf"></use>
+        </svg>
+      {%- endfor -%}
+    </div>
+  </div>
+{%- endif -%}
+
+{% stylesheet %}
+  .intensity-wrapper {
+    --intensity-fill-color: var(--color-foreground);
+    --intensity-fill-color-rgb: var(--color-foreground-rgb);
+    display: flex;
+    align-items: center;
+    gap: var(--gap-3xs);
+  }
+
+  .intensity-label {
+    white-space: nowrap;
+  }
+
+  .intensity {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-3xs);
+  }
+
+  .intensity-icon {
+    width: var(--intensity-icon-size, 16px);
+    height: var(--intensity-icon-size, 16px);
+    flex-shrink: 0;
+    fill: rgb(var(--intensity-fill-color-rgb) / var(--opacity-20));
+  }
+
+  .intensity-icon--filled {
+    fill: var(--intensity-fill-color);
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:names.product_intensity",
+  "tag": null,
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "t:content.resource_reference_product_intensity"
+    },
+    {
+      "type": "text",
+      "id": "metafield",
+      "label": "t:settings.product_intensity.metafield",
+      "info": "t:settings.product_intensity.metafield_info",
+      "default": "custom.intensity"
+    },
+    {
+      "type": "text",
+      "id": "label",
+      "label": "t:settings.product_intensity.label",
+      "default": "t:settings.product_intensity.default_label"
+    },
+    {
+      "type": "header",
+      "content": "t:content.appearance"
+    },
+    {
+      "type": "color",
+      "id": "icon_color",
+      "label": "t:settings.color",
+      "placeholder": "t:settings.default"
+    },
+    {
+      "type": "range",
+      "id": "icon_size",
+      "label": "t:settings.size",
+      "min": 8,
+      "max": 60,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-start",
+      "label": "t:settings.left",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-end",
+      "label": "t:settings.right",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:names.product_intensity",
+      "category": "t:categories.product"
+    }
+  ]
+}
+{% endschema %}

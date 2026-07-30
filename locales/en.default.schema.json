@@ -126,6 +126,7 @@
     "resource_reference_collection_title": "Displays title from parent collection",
     "resource_reference_product": "Auto connects to parent product",
     "resource_reference_product_card": "Displays product from parent section",
+    "resource_reference_product_intensity": "Displays intensity from a parent product metafield",
     "resource_reference_product_inventory": "Displays inventory from parent product",
     "resource_reference_product_media": "Displays media from parent product",
     "resource_reference_product_price": "Displays price from parent product",
@@ -406,6 +407,7 @@
     "product_recommendations": "Recommended products",
     "product_sku": "SKU",
     "product_review_stars": "Review stars",
+    "product_intensity": "Tea intensity",
     "product_variant_picker": "Variant picker",
     "products_carousel": "Featured collection: Carousel",
     "products_editorial": "Featured collection: Editorial",
@@ -1076,6 +1078,12 @@
       "description_preset": "Description",
       "input_preset": "Input",
       "checkbox_preset": "Checkbox label"
+    },
+    "product_intensity": {
+      "metafield": "Metafield",
+      "metafield_info": "Namespace and key of the metafield, e.g. custom.intensity. The value must be a number from 1 to 5.",
+      "label": "Label",
+      "default_label": "Intensity:"
     },
     // Checkbox setting to enable quick add to cart from product cards
     "quick_add": "Quick add",
